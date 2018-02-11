@@ -28,7 +28,6 @@ public class Controller extends Thread implements MouseListener, MouseMotionList
 			try {
 				Thread.sleep(10);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -59,9 +58,6 @@ public class Controller extends Thread implements MouseListener, MouseMotionList
 				if(Agenda.buttons.get(key).isActive()){
 					Agenda.buttons.get(key).setActivated(true);
 					Agenda.buttons.get(key).setHitBoxOutOfBounds();
-					/*System.out.println(Agenda.selectButtons.get(0).isActivated() + " Family");
-					System.out.println(Agenda.selectButtons.get(1).isActivated() + " work");
-					System.out.println(Agenda.selectButtons.get(2).isActivated() + " doctor");*/
 					effect = new ThreadEffect();
 					effect.start();
 					break;
@@ -110,9 +106,8 @@ public class Controller extends Thread implements MouseListener, MouseMotionList
 
 	@Override
 	public void mouseMoved(MouseEvent e) {
-		//System.out.println("X: " + e.getX() + " Y: " + e.getY());
+		
 		Point p = new Point(e.getX(), e.getY());
-		//for(ButtonPattern b : Agenda.buttons) b.isHover(p);
 		Iterator<Integer> agendaIterator = Agenda.buttons.keySet().iterator();
 
 		while(agendaIterator.hasNext()){
@@ -124,7 +119,6 @@ public class Controller extends Thread implements MouseListener, MouseMotionList
 		while(agendaIterator.hasNext()){
 			int key = (int) agendaIterator.next();
 			Agenda.selectButtons.get(key).isHover(p);
-			//System.out.println(Agenda.selectButtons.get(key).isActive() + " " +Agenda.selectButtons.get(key).toString());
 		}
 		for(ConfirmButton c : Agenda.confirmButtons) c.isHover(p);
 
