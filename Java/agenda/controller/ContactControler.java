@@ -26,8 +26,6 @@ public class ContactControler extends Thread implements MouseListener, MouseMoti
 	private boolean threadSwitch = true;
 	private ThreadSpin spin;
 	
-	//private int spin = Frame.HEIGHT / 2 ;
-	
 	public ContactControler(NewContact newContact, FindContact findContact, ModifyContact modifyContact, RemoveContact removeContact){
 		this.newContact = newContact;
 		this.findContact = findContact;
@@ -82,7 +80,6 @@ public class ContactControler extends Thread implements MouseListener, MouseMoti
 
 	@Override
 	public void mouseExited(MouseEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
 
@@ -121,7 +118,7 @@ public class ContactControler extends Thread implements MouseListener, MouseMoti
 	}
 	
 	private void spinProtocol(ContactFinder finder){
-		//findContact.getContactFinder().GETHITBOXES.LENGHT
+		
 		if(finder.getHitboxes2().size() > 0){
 			if(threadSwitch){
 				for(boolean b: finder.getHoverImg()){
@@ -175,11 +172,11 @@ public class ContactControler extends Thread implements MouseListener, MouseMoti
 		for(int i = min; i < max; i++){
 			if(finder.getHoverData()[i]){
 				String nameSurname = Agenda.fContacts.get(i).getName() + " " + Agenda.fContacts.get(i).getSurnames();
-				answer = JOptionPane.showConfirmDialog(null, "¿Deseas eliminar a " + nameSurname+"?", "EliminarContacto", 2);
+				answer = JOptionPane.showConfirmDialog(null, "Â¿Deseas eliminar a " + nameSurname+"?", "EliminarContacto", 2);
 				if(answer == 0){
 					r.execute(i);
 				}else if(answer == 2){
-					JOptionPane.showMessageDialog(null, "Operación cancelada", "Eliminar contacto", 0);
+					JOptionPane.showMessageDialog(null, "OperaciÃ³n cancelada", "Eliminar contacto", 0);
 				}
 				break;
 			}
