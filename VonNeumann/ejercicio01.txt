@@ -1,0 +1,11 @@
+Almacenar en las posiciones 20-29 los valores del 1 al 10
+-----------------------------------------------------------
+LDA #$1		Carga el valor 1 en A
+LDX #$20	Carga el valor 20 en X    
+STX $0F		Almacena el valor de X en el registro 0F
+STA *$0F	Almacena el valor de A en la posición que hay en la posición 0F
+INA		Suma 1 a A
+INX		Suma 1 a X
+CMP #11 (#$B)	Comprueba si es 0 la resta de A - 11
+JNZ $04		Si no hay 0 vuelve a la instrucción STX $0F y continúa
+HLT

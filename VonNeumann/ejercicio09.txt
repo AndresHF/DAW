@@ -1,0 +1,22 @@
+LDX #$A0
+STX $50 ; dirección de valor mínimo de la posición
+LDA #$AF
+STA $51; dirección de valor máximo de la posición
+;LDX *$51; usaré X para cargar el valor de la posición mayor y transferirlo a A
+
+CMP #$A7
+JZ $15 ; HLT
+LDX *$50
+LDA *$51
+STX *$51
+STA *$50
+LDX $50
+JZ $21
+INX
+LDA $51
+SUB #1
+STX $50
+STA $51
+JMP $08;
+
+HLT

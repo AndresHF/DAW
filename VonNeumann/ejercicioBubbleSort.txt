@@ -1,0 +1,39 @@
+;Almacenar el array de datos en las posiciones $F4-$F9 manualmente. ORDENADO POR BUBBLE SORT
+LDA #$F9
+STA $FB ; Dirección para la máxima dirección del array
+LDA #$F5
+STA $FC ; Dirección para la siguiente dirección del array
+LDA #$F4
+STA $FD ; Dirección para la mínima dirección del array
+
+
+CMP $FB ; Si el mínimo es igual al máximo(direcciones) hemos terminado la primera tanda del bucle
+JZ $1A 
+LDA *$FD
+CMP *$FC
+JNC $1B ; Si el actual es menor al anterior(valor) no los cambies
+LDX *$FC
+STX *$FD
+STA *$FC
+JZ $ 27 ; Salto de apoyo
+LDX $FC ; Aumenta 1 el mínimo y el siguiente(direcciones) y vuelve a empezar
+INX
+STX $FC
+LDA $FD
+INA
+STA $FD
+JMP $0C
+
+; Resta 1 al valor máximo(dirección) y compáralo con el valor mínimo (dirección). Si da 0 es que hemos terminado. Si no, resetea el mínimo y el siguiente al valor original y vuelta a empezar
+LDA $FB
+DCA
+CMP #$F4
+JZ $39 ; has terminado
+STA $FB
+LDA #$F4
+STA $FD
+LDX #$F5
+STX $FC
+JMP $0C
+
+HLT

@@ -1,0 +1,44 @@
+LDA $FC
+CMP #0
+JZ $0E ;ALMACENA Y HLT
+LDA $FD
+CMP #0
+JZ $0E ;ALMACENA Y HLT
+LDA #0
+STA $FA
+STA $F9
+JZ $13
+
+CMP $FD
+JZ $20 ; CARGA F9 Y ALMACENA EN FF
+INA
+STA $FA
+LDA $F9
+ADD $FC
+STA $F9
+LDA $FA
+JNZ $11
+
+LDA $F9
+STA $FF 
+HLT
+------------------------------------
+FORMA DANI
+--------------------------------------
+LDA #0 ; contador a 0
+STA $FF ; Inicializo el resultado
+
+CMP $FD ; comparo A con la direccion FD que es 3 (el multiplo)
+JC $14 ; si da carry salto al resultado
+INA ; incremento A
+
+STA $A0 ; almaceno el contador en la direccion
+LDA $FF ; cargo el resultado
+ADD $FC ; sumo al resultado anterior
+STA $FF ; cargo el resultado en su direccion
+
+LDA $A0 ; recupero el valor del contador
+
+JMP $04 ; salto al comienzo del bucle
+LDA $FF ; cargo el resultado
+HLT

@@ -1,0 +1,19 @@
+LDA #0
+STA $F5 ; contador
+LDA $FB
+STA $F4 ; acumulador empeiza con el valor de FB
+
+CMP $FC
+JNC $18 ;almacena y HLT
+SUB $FC
+STA $F4
+LDA $F5
+INA
+STA $F5
+LDA $F4
+JMP $08; vuelta a empezar
+
+STA $FE ;aquí estará el resto
+LDA $F5
+STA $FF ;aquí el resultado
+HLT

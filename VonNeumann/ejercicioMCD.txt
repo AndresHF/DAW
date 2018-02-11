@@ -1,0 +1,43 @@
+;En $F4 y $F5 estarán los números sobre los que quiero calcular el mcd
+
+;Comprueba que ninguno de los dos números es 0, si cualquiera de los 2 es 0 almacena en $FF y HLT
+LDA $F5
+CMP #0
+JZ $0A;
+LDA $F4
+CMP #0
+JNZ $0D;
+STA $FF
+HLT
+
+;Si los dos valores son el mismo número ya tenemos el mcd
+CMP $F5
+JNZ $13
+STA $FF
+HLT
+
+STA $FB ; esta será la dirección de referencia al mayor de los dos números
+LDA $F5
+STA $FC ; esta será la dirección de referencia al menor de los dos números
+JC $20  ; F4 es mayor que F5, por lo tanto  F4 será nuestro numerador, si no hay carry inviertelos
+STA $FB
+LDA $F4
+STA $FC
+
+;BUCLE para la división
+LDA $FB
+CMP $FC
+JNC $2C ;comprueba si el numerador es mayor que el denominador para poder seguir restando
+SUB $FC
+JZ $34  ; si el resto es 0 tenemos el mcd
+STA $FB
+JMP $22 ; vuelve a empezar
+
+LDX $FC 
+STX $FB ; ahora el denominador es el numerador
+STA $FC ; y el resto es el denominador
+JMP $20 ; vuelve al bucle de la división
+
+LDA $FC
+STA $FF
+HLT

@@ -1,0 +1,12 @@
+LDX #3
+LDA #$A0
+STA $FF
+
+CMP  #$B0
+JZ $10 ; HLT
+STX *$FF
+INA
+STA $FF
+JMP $06 ;CMP
+
+HLT
