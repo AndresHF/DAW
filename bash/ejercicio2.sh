@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#--------------------------------EJERCICIO 2---------------------------------------------------------------------------
 
 # 1.Cree un directorio que se llame ejercicio2
 cd ~/REPASO/ej2
