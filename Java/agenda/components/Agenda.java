@@ -70,7 +70,7 @@ public class Agenda {
 		//AGENDA TYPE SELECTION BUTTONS CONFIG
 		selectFriends = new SelectFriends("img/family1.png","img/family.png","Familiares y amigos",140,160,agendaDevice);
 		selectWork = new SelectWork("img/work1.png","img/work.png","Contactos de trabajo",350,200,agendaDevice);
-		selectDoctor = new SelectDoctor("img/doctor1.png","img/doctor.png","Agenda médica",550,220,agendaDevice);
+		selectDoctor = new SelectDoctor("img/doctor1.png","img/doctor.png","Agenda mÃ©dica",550,220,agendaDevice);
 		selectButtons.put(0, selectFriends);
 		selectButtons.put(1, selectWork);
 		selectButtons.put(2, selectDoctor);
@@ -78,19 +78,9 @@ public class Agenda {
 		friends = false;
 		work = false;
 		doctor = false;
-		//29
-		//String nombres[] = {"Andrés","Coby","Jaime","Daniel","Javier","Virginia","Ana","Berto","Carolina","Erik","Pedro","Zahara","Sara","Carlos","Luis","Xavier","Fausto","Gabriel","Inés","Karol","Miguel","Noelia","Oscar","Roberto","Raluca","Sonia","Teodoro","Ursula","Willdorf"};
-		//27
-		//String apellidos[] = {"Rodríguez","Patata","Pérez","Herrero","Martínez","Jander","Conde","Morr","Wanxito","Casas","Sardinero","Ayuso","Ballestero","Cremades","López","Brijander","Mollinedo","Martínez","Tirado","Pindado","Calamita","del Toro","Maisterra","Cañas","Giménez","More","Nawer"};
+	
 		fContacts = new ArrayList<FriendContact>();
 		loadFriendAgenda();
-		/*System.out.println((int)(Math.random()*29));
-		System.out.println((int)(Math.random()*27));
-		for(int i = 0; i < 450000; i++){
-			fContacts.add(new FriendContact(nombres[(int)(Math.random()*29)],apellidos[(int)(Math.random()*27)]+" "+apellidos[(int)(Math.random()*27)],"(0034) 91-123 45 67","(0034) 681 667 671","Avenida Los tordos del señor Nº666 4ºDRCH, Majadahonda (Madrid). CP: 28220 ESPAÑA","hola.ke.ase@gmail.com"));
-		}
-		Collections.sort(fContacts);*/
-
 	}
 	
 	public void paintAgenda(Graphics g){
