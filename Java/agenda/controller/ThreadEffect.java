@@ -14,13 +14,7 @@ import command.RemoveContact;
 
 public class ThreadEffect extends Thread{
 	
-	//private boolean finishedEffect = false;
 	private boolean loop = true;
-	
-	public ThreadEffect(){
-		
-	
-	}
 	
 	public void run(){
 		if(Agenda.buttons.get(0).isActivated()){
@@ -92,7 +86,6 @@ public class ThreadEffect extends Thread{
 		
 		if(allDone()){
 			loop = false;
-			System.out.println("ALL DONE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		}
 	}
 
