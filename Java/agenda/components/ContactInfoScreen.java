@@ -19,7 +19,6 @@ public class ContactInfoScreen {
 		info = fContact.toString();
 		
 	}
-	//FALTAN 2 CONSTRUCTORES MÁS wContact y dContact
 	
 	public void paint(Graphics g){
 		
