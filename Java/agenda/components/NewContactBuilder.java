@@ -18,9 +18,9 @@ public class NewContactBuilder {
 	private final int SELECTED_X = 10;
 	public static String name = "Selecciona nombre";
 	public static String surnames = "Selecciona apellidos";
-	public static String phoneNumber = "Selecciona teléfono fijo";
-	public static String movileNumber = "Selecciona teléfono móvil";
-	public static String address = "Selecciona dirección";
+	public static String phoneNumber = "Selecciona telÃ©fono fijo";
+	public static String movileNumber = "Selecciona telÃ©fono mÃ³vil";
+	public static String address = "Selecciona direcciÃ³n";
 	public static String email = "Selecciona e-mail";
 	private String[] data = new String[6];
 	private String[] titles = {name, surnames, phoneNumber, movileNumber, address, email};
@@ -74,16 +74,16 @@ public class NewContactBuilder {
 			else if(data[i].length() > 105) g.setFont(font3);
 			else g.setFont(font);
 			g.drawString(data[i], x, y);
-			//g.drawRect((int)hitboxes[i].getX(), (int)hitboxes[i].getY(), (int)hitboxes[i].width, (int)hitboxes[i].height);
-
 		}
 	}
+	
 	public void setHoverData(Point p){
 		
 		for(int i = 0; i < hoverData.length; i++){
 			hoverData[i] = hitboxes[i].contains(p);
 		}
 	}
+	
 	public void launchDataSet(){
 		
 		for(int i = 0; i < data.length; i++){
@@ -103,12 +103,12 @@ public class NewContactBuilder {
 							}
 							
 						}else{
-							JOptionPane.showMessageDialog(null, "No puedes introducir el campo vacío");
+							JOptionPane.showMessageDialog(null, "No puedes introducir el campo vacÃ­o");
 						}
 					}
 				}catch(NullPointerException e){
 					e.printStackTrace();
-					JOptionPane.showMessageDialog(null, "Acción cancelada...");
+					JOptionPane.showMessageDialog(null, "AcciÃ³n cancelada...");
 				}
 				
 			}
