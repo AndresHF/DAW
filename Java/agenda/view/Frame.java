@@ -48,15 +48,15 @@ public class Frame extends JFrame{
 		
 		setBounds(XPOS, YPOS, WIDTH, HEIGHT);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setTitle("JaGUaR´s Agenda");
+		setTitle("JaGUaRÂ´s Agenda");
 		setIconImage(icon);
 		setResizable(false);
 		canvas = new MainCanvas();
 		controller = new Controller(canvas);
 		newController = new ContactControler((NewContact)Agenda.buttons.get(0),
-											 (FindContact)Agenda.buttons.get(1),
-											 (ModifyContact)Agenda.buttons.get(2),
-											 (RemoveContact)Agenda.buttons.get(3));
+						     (FindContact)Agenda.buttons.get(1),
+						     (ModifyContact)Agenda.buttons.get(2),
+						     (RemoveContact)Agenda.buttons.get(3));
 		
 		canvas.addMouseMotionListener(controller);
 		canvas.addMouseListener(controller);
