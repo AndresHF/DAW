@@ -84,7 +84,9 @@ public class Lista {
 	}
 	
 	public void removeByIndex(int index){
-		if(index < 0 || index > this.length() - 1) 
+		if(this.head == null)
+			System.out.println("List is empty");
+		else if(index < 0 || index > this.length() - 1) 
 			System.out.println("¡¡OUT OF BOUNDS!! allowed positions between 0 and " + (this.length() - 1) + " included.");
 		else if(index == 0) 
 			removeFirst();
