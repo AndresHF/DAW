@@ -2,7 +2,6 @@ package command;
 
 public abstract class ConfirmButton extends ButtonPattern{
 	
-	//500 Y WENA WENA
 	private boolean pressed = false;
 	
 	public ConfirmButton(String path, String path2, String title, int posX, int posY, AgendaDevice agendaDevice) {
