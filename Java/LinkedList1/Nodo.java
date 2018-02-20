@@ -6,7 +6,6 @@ public class Nodo {
 	private int info;
 
 	public Nodo(){
-		
 		this.next = null;
 		this.info = 0;
 	}
@@ -41,7 +40,4 @@ public class Nodo {
 	public void setInfo(int info) {
 		this.info = info;
 	}
-	
-	
-	
 }
