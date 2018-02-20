@@ -38,38 +38,9 @@ public class Lista {
 	
 	public void removeFirst(){
 		if(this.head == null)
-			System.out.println("Linked list is empty, can´t remove first.");
+			System.out.println("Linked list is empty, canÂ´t remove first.");
 		else
 			this.head = this.head.getNext();
-	}
-	
-	public void removeLast(){
-		if(this.head == null)
-			System.out.println("Linked list is empty, can´t remove last.");
-		else if(this.head.getNext() == null) 
-			this.head = null;
-		else{
-			Nodo n = this.head;
-			while(n.getNext().getNext() != null){
-				n = n.getNext();
-			}
-			n.setNext(null);
-		}
-	}
-	
-	public void removeByIndex(int index){
-		if(index < 0 || index > this.length() - 1) 
-			System.out.println("¡¡OUT OF BOUNDS!! allowed positions between 0 and " + (this.length() - 1) + " included.");
-		else if(index == 0) 
-			removeFirst();
-		else if(index == length() - 1) 
-			removeLast();
-		else{
-			Nodo prev = getByIndex(index - 1);
-			prev.setNext(prev.getNext().getNext());
-			Nodo deleted = getByIndex(index);
-			deleted = null;
-		}
 	}
 	
 	public void addEnd(int info){
@@ -83,10 +54,24 @@ public class Lista {
 		n.setNext(new Nodo(info));
 	}
 	
+	public void removeLast(){
+		if(this.head == null)
+			System.out.println("Linked list is empty, canÂ´t remove last.");
+		else if(this.head.getNext() == null) 
+			this.head = null;
+		else{
+			Nodo n = this.head;
+			while(n.getNext().getNext() != null){
+				n = n.getNext();
+			}
+			n.setNext(null);
+		}
+	}
+	
 	public void addByIndex(int index, int info){
 		
 		if(index < 0 || index > this.length()) 
-			System.out.println("¡¡OUT OF BOUNDS!! allowed positions between 0 and " + this.length() + " included.");
+			System.out.println("Â¡Â¡OUT OF BOUNDS!! allowed positions between 0 and " + this.length() + " included.");
 		else if(index == 0) 
 			addStart(info);
 		else if(index == length()) 
@@ -97,6 +82,22 @@ public class Lista {
 			getByIndex(index - 1).setNext(nuevo);
 		}
 	}
+	
+	public void removeByIndex(int index){
+		if(index < 0 || index > this.length() - 1) 
+			System.out.println("Â¡Â¡OUT OF BOUNDS!! allowed positions between 0 and " + (this.length() - 1) + " included.");
+		else if(index == 0) 
+			removeFirst();
+		else if(index == length() - 1) 
+			removeLast();
+		else{
+			Nodo prev = getByIndex(index - 1);
+			prev.setNext(prev.getNext().getNext());
+			Nodo deleted = getByIndex(index);
+			deleted = null;
+		}
+	}
+
 	public Nodo getByIndex(int index) throws NullPointerException{
 
 		int counter = 0;
