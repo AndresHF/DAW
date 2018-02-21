@@ -95,8 +95,6 @@ public class Lista {
 		else{
 			Nodo prev = getByIndex(index - 1);
 			prev.setNext(prev.getNext().getNext());
-			Nodo deleted = getByIndex(index);
-			deleted = null;
 		}
 	}
 
