@@ -46,12 +46,14 @@ public class Lista {
 	public void addEnd(int info){
 		
 		Nodo n = this.head;
-		
-		while(n.getNext() != null){
-			n = n.getNext();
+		if(n == null) this.head = new Nodo(info);
+		else{
+			while(n.getNext() != null){
+				n = n.getNext();
+			}
+			
+			n.setNext(new Nodo(info));
 		}
-		
-		n.setNext(new Nodo(info));
 	}
 	
 	public void removeLast(){
