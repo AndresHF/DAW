@@ -16,7 +16,7 @@ public class Lista {
 		if(this.head == null)
 			System.out.println("Empty list..");
 		else{
-			Nodo n = this.getHead();
+			Nodo n = this.head;
 			while(n != null){
 				System.out.println(n.toString());
 				n = n.getNext();
