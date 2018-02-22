@@ -6,9 +6,8 @@ public class Main {
 		
 		
 		Lista l = new Lista();
-
 		for(int i = 0; i <= 10; i++){
-			l.addStart(i);
+			l.addStart((int)(Math.random()*80)-40);
 		}
 
 		l.printList();
@@ -60,11 +59,14 @@ public class Main {
 		
 		System.out.println("-------------------------------");
 		
-		int length = l.length();
+		/*int length = l.length();
 		
 		for(int i = 0; i < length; i++){
 			l.removeByIndex(1);
 		}
+		l.printList();*/
+		
+		l.sortByInfo();
 		l.printList();
 	}
 
