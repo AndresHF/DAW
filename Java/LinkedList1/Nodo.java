@@ -1,11 +1,11 @@
 package eva2.linkedlist;
-
-public class Nodo {
+public class Nodo implements Comparable<Nodo>{
 
 	private Nodo next;
 	private int info;
 
 	public Nodo(){
+		
 		this.next = null;
 		this.info = 0;
 	}
@@ -18,7 +18,7 @@ public class Nodo {
 	public String toString(){
 		String nextInfo = "";
 		if(this.next != null){
-			nextInfo = "   -->";
+			nextInfo = "   --> ";
 		}else{
 			nextInfo = "   --> LAST NODE"; 
 		}
@@ -40,4 +40,12 @@ public class Nodo {
 	public void setInfo(int info) {
 		this.info = info;
 	}
+
+	@Override
+	public int compareTo(Nodo other) {
+		
+		return this.info - other.info;
+	}
+
+	
 }
