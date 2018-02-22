@@ -124,6 +124,23 @@ public class Lista {
 		return counter;
 	}
 
+	public void sortByInfo(){
+		
+		int length = length();
+		
+		for(int i = 0; i < length; i++){
+			for(int j = i + 1; j < length; j++){
+				Nodo actual = getByIndex(i);
+				Nodo toCompare = getByIndex(j);
+				if(actual.compareTo(toCompare) > 0){
+					int aux = actual.getInfo();
+					actual.setInfo(toCompare.getInfo());
+					toCompare.setInfo(aux);
+				}
+			}
+		}
+		
+	}
 	public Nodo getHead() {
 		return head;
 	}
