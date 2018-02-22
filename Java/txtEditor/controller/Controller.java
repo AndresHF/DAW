@@ -97,7 +97,6 @@ public class Controller implements ActionListener, DocumentListener {
 				JOptionPane.showMessageDialog(null, "Sorry, file must be .txt");
 			}else{
 				try {
-					//byte bt[] = );
 					str = new String(Files.readAllBytes(file.toPath()),Charset.forName("Cp1252"));
 					resetTextPane();
 					TextPanePanel.area.setText(str);
