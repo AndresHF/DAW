@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<c:catalogoLibro
+xmlns:c="http://www.prueba.es/catalogo_libros"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.prueba.es/catalogo_libros schema2.xsd">
+
+    <c:libro c:categoria="ficcion">
+        <c:titulo>Los hombres que no amaban</c:titulo>
+        <c:autor>Steig Larsson</c:autor>
+        <c:fecha>
+            <c:anyo>2008</c:anyo>  
+        </c:fecha>
+        <c:ISBN>978-84-233-404</c:ISBN>
+        <c:editor>Destino</c:editor>
+        <c:enstock>true</c:enstock>
+        <c:revisor></c:revisor>
+    </c:libro>
+
+    <c:libro c:categoria="noficcion">
+        <c:titulo>Java a través de ejemplos</c:titulo>
+        <c:autor>Jesús Bobadill</c:autor>
+        <c:autor>Adela Sancho</c:autor>
+        <c:fecha>
+            <c:mes>1</c:mes>
+            <c:anyo>2003</c:anyo>  
+        </c:fecha>
+        <c:ISBN>84-7897-549-7</c:ISBN>
+        <c:editor>Ra-Ma</c:editor>
+        <c:enstock>false</c:enstock>
+        <c:revisor>Luis Rodrigo</c:revisor>
+    </c:libro>
+    
+</c:catalogoLibro>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+targetNamespace="http://www.prueba.es/catalogo_libros"
+xmlns="http://www.prueba.es/catalogo_libros"
+elementFormDefault="qualified">
+
+<!--tipos simples-->
+    <xsd:simpleType name="tipoNombre">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="0"/>
+          <xsd:maxLength value="100"/>
+          <xsd:whiteSpace value="replace"/>  
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="tipoISBN">
+        <xsd:restriction base="xsd:string">
+          <xsd:minLength value="13"/>
+          <xsd:maxLength value="17"/>
+          <xsd:whiteSpace value="collapse"/>
+        </xsd:restriction>  
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="tipoMes">
+        <xsd:restriction base="xsd:positiveInteger">
+          <xsd:minInclusive value="1"/>
+          <xsd:maxInclusive value="12"/>
+        </xsd:restriction>  
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="tipoAnyo">
+      <xsd:restriction base="xsd:positiveInteger">
+        <xsd:minInclusive value="1900"/>
+        <xsd:maxInclusive value="2011"/>
+      </xsd:restriction>  
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="tipoCategoria">
+      <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="autobiografia"/>
+        <xsd:enumeration value="noficcion"/>
+        <xsd:enumeration value="ficcion"/>  
+      </xsd:restriction>  
+    </xsd:simpleType>
+    
+    
+    <xsd:element name="titulo" type="tipoNombre"/>
+    <xsd:element name="autor" type="tipoNombre"/>
+    <xsd:element name="editor" type="tipoNombre"/>
+    <xsd:element name="ISBN" type="tipoISBN"/>
+    <xsd:element name="enstock" type="xsd:boolean"/>
+    <xsd:element name="mes" type="tipoMes"/>
+    <xsd:element name="anyo" type="tipoAnyo"/>
+    <xsd:element name="revisor" type="xsd:string"/>
+    
+    <!--atributos-->
+    <xsd:attribute name="categoria" type="tipoCategoria"/>
+    
+    <!--tipos complejos-->
+    <xsd:complexType name="tipoFecha" >
+      <xsd:sequence>
+        <xsd:element ref="mes" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="anyo" maxOccurs="1"/>  
+      </xsd:sequence>
+    </xsd:complexType> 
+    
+    <xsd:complexType name="tipoLibro">
+      <xsd:sequence>
+        <xsd:element ref="titulo" maxOccurs="1"/>
+        <xsd:element ref="autor" maxOccurs="unbounded"/>
+        <xsd:element name="fecha" type="tipoFecha" maxOccurs="1"/>
+        <xsd:element ref="ISBN" maxOccurs="1"/>
+        <xsd:element ref="editor" maxOccurs="1"/>
+        <xsd:element ref="enstock" maxOccurs="1"/>
+        <xsd:element ref="revisor" maxOccurs="1"/>
+      </xsd:sequence>
+      <xsd:attribute ref="categoria" use="required"/>  
+    </xsd:complexType>
+    
+    <xsd:complexType name="tipoCatalogo">
+      <xsd:sequence>
+        <xsd:element name="libro" type="tipoLibro" minOccurs="0" maxOccurs="unbounded"/>  
+      </xsd:sequence>  
+    </xsd:complexType>
+    
+    <!--RAIZ-->
+    <xsd:element name="catalogoLibro" type="tipoCatalogo"/>
+    
+</xsd:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

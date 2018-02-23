@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--ANDRÉS HERRERO FRAGOSO-->
+  <!--tipos simples-->
+  <xsd:simpleType name="tipoDNI">
+      <xsd:restriction base="xsd:positiveInteger">
+        <xsd:pattern value="[0-9]{8}"/>
+      </xsd:restriction>  
+  </xsd:simpleType>
+  
+    <xsd:simpleType name="tipoName">
+      <xsd:restriction base="xsd:string">
+        <xsd:pattern value="[A-Z]{1}[a-z]{1,}"/>
+        <xsd:whiteSpace value="replace"/>
+      </xsd:restriction>  
+  </xsd:simpleType>
+  
+  <xsd:simpleType name="tipoSurname">
+      <xsd:restriction base="xsd:string">
+        <xsd:pattern value="[A-Z]{1}[a-z]{1,} [A-Z]{1}[a-z]{1,}"/>
+        <xsd:maxLength value="50"/>
+        <xsd:whiteSpace value="preserve"/>
+      </xsd:restriction>  
+  </xsd:simpleType>
+  
+    <xsd:simpleType name="tipoComment">
+      <xsd:restriction base="xsd:string">
+        <xsd:maxLength value="200"/>
+        <xsd:whiteSpace value="preserve"/>
+      </xsd:restriction>  
+  </xsd:simpleType>
+  
+  <xsd:element name="nombre" type="tipoName"/>
+  <xsd:element name="apellidos" type="tipoSurname"/>
+  <xsd:element name="dni" type="tipoDNI"/>
+  <xsd:element name="comentario" type="tipoComment"/>
+  
+
+  <!--atributos-->
+  <xsd:simpleType name="tipoDate">
+      <xsd:restriction base="xsd:date">
+          <xsd:minInclusive value="1900-01-01"/>
+          <xsd:maxInclusive value="2018-02-20"/>
+      </xsd:restriction>  
+  </xsd:simpleType>
+  
+  <xsd:attribute name="nacimiento" type="tipoDate"/>
+  
+  <!--tipos complejos-->
+      <xsd:complexType name="info">
+        <xsd:sequence>
+            <xsd:element ref="nombre"/>
+            <xsd:element ref="apellidos"/>
+            <xsd:element ref="dni"/>  
+        </xsd:sequence>  
+      </xsd:complexType>  
+ 
+  
+  <xsd:element name="datos" type="info"/>
+  
+      <xsd:complexType name="tipoPersona">
+            <xsd:sequence>
+              <xsd:element ref="datos"/>
+              <xsd:element ref="comentario" minOccurs="0" /> 
+            </xsd:sequence> 
+            <xsd:attribute ref="nacimiento"/>
+
+      </xsd:complexType>  
+
+  
+  <xsd:element name="persona" type="tipoPersona"/>  
+  </xsd:schema>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
