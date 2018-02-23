@@ -35,7 +35,7 @@ public class Lista {
 		}
 
 	}
-	
+	 
 	public void removeFirst(){
 		if(this.head == null)
 			System.out.println("Linked list is empty, can´t remove first.");
