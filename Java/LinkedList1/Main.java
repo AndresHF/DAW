@@ -68,6 +68,29 @@ public class Main {
 		
 		l.sortByInfo();
 		l.printList();
+		
+		System.out.println("-------------------------------");
+		
+		l.addByIndex(l.length(), 11);
+		l.addByIndex(l.length(), 10);
+		l.addByIndex(l.length(), 10);
+		
+		l.printList();
+		System.out.println("------------------");
+		l.removeByInfo(11);
+		l.printList();
+		
+		System.out.println("-------------------------------");
+		
+		l.sortByInfo();
+		l.addSortedAsc(1);
+		l.addSortedAsc(2);
+		l.addSortedAsc(3);
+		l.addSortedAsc(4);
+		l.addSortedAsc(5);
+		l.addSortedAsc(-10002);
+		l.addSortedAsc(10002);
+		l.printList();
 	}
 
 }
