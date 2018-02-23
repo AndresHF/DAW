@@ -141,6 +141,19 @@ public class Lista {
 		}
 		
 	}
+	public void addSortedAsc(int info){
+		
+		int length = length();
+		boolean sup = false;
+		for(int i = 0; i < length; i++){
+			if(getByIndex(i).getInfo() >= info){
+				addByIndex(i, info);
+				sup = true;
+				break;
+			}
+		}
+		if(!sup) addEnd(info);
+	}
 	public Nodo getHead() {
 		return head;
 	}
