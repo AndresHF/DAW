@@ -1,0 +1,21 @@
+
+
+# 1. Cree un programa que reciba una lista de números y que devuelva aquellos que sean múltiplos del primer número pasado
+
+# 2. Cree un script que pida por linea de comandos un número y que muestre la tabla de multiplicar de ese número
+
+# 3. Cree un script que llame al script anterior pasándole una lista de números
+
+# 4. Cree un script que reciba un nombre de grupo y devuelva todos los usuarios que pertenecen a ese grupo
+
+# 5. Cree un script que reciba una lista de grupos y devuelva que usuarios pertenecen a todos los grupos pasados
+
+# 6. IGUAL QUE EL ANTERIOR con los que no pertenecen a ningún grupo
+
+# 7. Cree un script que reciba una cadena de texto y devuelva si es palíndroma
+
+# 8  Si al script anterior no se le pasa cadena por parametro la pide por teclado, la pedirá cíclicamente hasta que introduzcas algo
+
+# 9. Cree un script que devuelva el proceso que más archivos del sistema tiene abiertos ---> comando lsof
+
+
