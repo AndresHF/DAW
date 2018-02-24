@@ -46,10 +46,3 @@ egrep -e "(:x:.{1,}:.{1,})$" /etc/group | cut -f4 -d: | tr "," " " | xargs -I{} 
 
 # 12. ¿Cuántos grupos no tienen usuario? (sólo /etc/group)
 grep -e ":$" /etc/group | wc -l
-
-
-
-
-
-
-
