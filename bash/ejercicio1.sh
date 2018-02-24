@@ -22,8 +22,3 @@ ln -s ../../01/7 7
 mkdir kk2; cp -r ../../{01..09} kk2
 # 10. Con trayectoria relativa sitúese en el directorio de trabajo y borre ejercicio1
 cd ~/REPASO/ej1; #rm -r ejercicio1
-
-
-
-
-
