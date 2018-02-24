@@ -45,7 +45,3 @@ ps -eo comm | grep "bash" | wc -l
 
 # 14. Para todos los pid y sus ppid muestre -> ppid: pid pid pid pid.....
 ps -eo ppid | sort -n | uniq | tr -d " " | grep -v "[A-Z]" | xargs -I{} bash -c 'echo --{} | tr "\n" ":"; ps -eo pid,ppid | tr -s " " " " |egrep "{}$" | cut -f1,2 -d" " | tr "\n" " ";echo'
-
-
-
-
