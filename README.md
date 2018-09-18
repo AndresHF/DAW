@@ -4,8 +4,9 @@
 <br>
 <h2>Welcome</h2>
 This repository is about basic projects, examples and exercises done at <strong>IES María de Zayas y Sotomayor</strong>, Madrid (Spain).
+Keep in mind that some things at this repository should be a repository on its own but I preferred to keep everything in the same place.
 
-The most important thing done at first year was a project for Markup languages subject, you can check it <a href="https://github.com/wickedmelkor/wickedmelkor.github.io"><strong>HERE</strong></a>.
+The most important things done at first year were a project for Markup languages subject, you can check it <a href="https://github.com/wickedmelkor/wickedmelkor.github.io"><strong>HERE</strong></a>, and a Continious Integration project (Maven + Jenkings + git + Java) that you can check <a href="https://github.com/bulbrange/TOD2"><strong>HERE</strong></a>.
 
 <h2>What are you going to find here?</h2>
 
