@@ -4,5 +4,5 @@
 
 This repository is about basic projects, examples and exercises done at <strong>IES María de Zayas y Sotomayor</strong>, Madrid (Spain).
 
-The most important thing done at first year was a project for Markup languages subject, you can check it <a href="https://wickedmelkor.github.io/"><strong>HERE</strong></a>.
+The most important thing done at first year was a project for Markup languages subject, you can check it <a href="https://github.com/wickedmelkor/wickedmelkor.github.io"><strong>HERE</strong></a>.
 
