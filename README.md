@@ -9,4 +9,10 @@ Keep in mind that some things at this repository should be a repository on its o
 The most important things done at first year were a project for Markup languages subject, you can check it <a href="https://github.com/wickedmelkor/wickedmelkor.github.io"><strong>HERE</strong></a>, and a Continious Integration project (Maven + Jenkings + git + Java) that you can check <a href="https://github.com/bulbrange/TOD2"><strong>HERE</strong></a>.
 
 <h2>What are you going to find here?</h2>
-
+<ul>
+  <li>Assembly language exercises</li>
+  <li>Java Swing apps</li>
+  <li>Java expamples</li>
+  <li>Shell scripting</li>
+  <li>Markup languages examples</li>
+</ul>
