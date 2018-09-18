@@ -15,4 +15,5 @@ The most important things done at first year were a project for Markup languages
   <li>Java expamples</li>
   <li>Shell scripting</li>
   <li>Markup languages examples</li>
+  <li>Artificial Intelligente with Processing (Smart Rockets)</li>
 </ul>
