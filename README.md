@@ -1,4 +1,6 @@
-<h1>WEB DEVELOPMENT (first year)</h1>
-What I'm doing while studying Web Development.
+#WEB DEVELOPMENT (first year)
+##What I'm doing while studying Web Development.
 
-These are some basic projects and exercises done at Web Development first course.
+This repository is about basic projects, examples and exercises 
+
+are some basic projects and exercises done at Web Development first course.
